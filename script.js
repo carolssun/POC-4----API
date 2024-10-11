@@ -32,12 +32,10 @@ async function getGatinho2(endpoint) {
 getGatinho('https://cataas.com/cat/cute'); // Gato fofo
 getGatinho2('https://cataas.com/cat/sleeping'); // Gato dormindo
 
-// Função para recarregar apenas o gato fofo
-document.getElementById("reloadGatoFofo").addEventListener("click", () => {
-    getGatinho('https://cataas.com/cat/cute');
-});
+function trocarGatoFofo() {
+    getGatinho('https://cataas.com/cat/cute'); // Muda a imagem ao clicar
+}
 
-// Função para recarregar apenas o gato dormindo
-document.getElementById("reloadGatoDormindo").addEventListener("click", () => {
-    getGatinho2('https://cataas.com/cat/sleeping');
-});
+function trocarGatoDormindo() {
+    getGatinho2('https://cataas.com/cat/sleeping'); // Muda a imagem ao clicar
+}
