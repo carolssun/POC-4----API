@@ -118,12 +118,12 @@ As características `fetch`, `then`, `catch`, `try`, e `finally` são usadas em 
     </body>
     </html>
 ```
+```
 
 
 * Código JavaScript:
 
-
-```js
+``` js
   // Função para buscar imagem de gato fofo
   function getGatinho(endpoint) {
       fetch(endpoint)
@@ -166,6 +166,7 @@ As características `fetch`, `then`, `catch`, `try`, e `finally` são usadas em 
       getGatinho2('https://cataas.com/cat/sleeping'); // Muda a imagem ao clicar
   }
 ```
+
 
 Depois de aplicar um pouco de CSS, observe o resultado final: 
 ![imagem-POC4](https://github.com/user-attachments/assets/f31e83ae-83e2-427c-8faa-911fa8c6b08d)
