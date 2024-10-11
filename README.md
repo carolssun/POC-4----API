@@ -80,7 +80,7 @@ As características `fetch`, `then`, `catch`, `try`, e `finally` são usadas em 
 <div id="comoFazer">
   
 ## Como fazer?
-* API Utilizada: Cataas API, que fornece imagens aleatórias de gatos.
+* API Utilizada: [Cataas API](https://cataas.com), que fornece imagens aleatórias de gatos.
 * Configuração do Ambiente: Criação de um arquivo HTML simples com uma estrutura básica, incluindo um elemento <div> para exibir as imagens e um script JavaScript para consumir a API. 
   
 * Requisição à API: Implementação de duas funções JavaScript para obter imagens de gatos e chamá-las:
