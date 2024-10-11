@@ -16,7 +16,7 @@
 <div id="objetivo">
 
 ## Objetivo
-  Esta prova de conceito visa criar uma interface simples que consome uma `API` pública para obter e exibir imagens de gatos em uma página web, utilizando requisições assíncronas com `fetch` e manipulando os dados recebidos.
+  Esta Prova de Conceito tem como objetivo demonstrar, na prática, o uso de uma API para integrar e exibir dados em uma aplicação. A POC visa criar uma interface simples que consome uma API pública para obter e exibir imagens de gatos em uma página web, utilizando requisições síncronas e assíncronas e manipulando os dados recebidos. O foco é mostrar como consumir a API de forma eficiente, tratar erros e garantir que a integração seja feita de forma fluida. Com isso, será possível avaliar a viabilidade e os desafios de implementar uma API em uma aplicação real.
 
 </div> 
 
@@ -124,47 +124,47 @@ As características `fetch`, `then`, `catch`, `try`, e `finally` são usadas em 
 
 
 ```js
-// Função para buscar imagem de gato fofo
-function getGatinho(endpoint) {
-    fetch(endpoint)
-        .then(response => {
-            return response.url; // A URL da imagem é retornada diretamente
-        })
-        .then(urlIMG => {
-            let content = document.getElementById("content");
-            content.innerHTML = `<img src="${urlIMG}" alt="Gato" style="width: 300px; margin: 10px; height: 400px" />`;
-            content.innerHTML += `<p> Um gato fofo </p>`;
-        })
-        .catch(error => console.log(error))
-        .finally(() => console.log("FIM"));
-}
-
-// Função assíncrona para buscar imagem de gato dormindo
-async function getGatinho2(endpoint) {
-    try {
-        let response = await fetch(endpoint);
-        let urlIMG = response.url; // Usa diretamente a URL da resposta
-        let content = document.getElementById('content2');
-        content.innerHTML = `<img src="${urlIMG}" alt="Gato" style="width: 300px; margin: 10px; height: 400px" />`;
-        content.innerHTML += `<p> Um gato dormindo </p>`;
-    } catch (error) {
-        console.log(error);
-    } finally {
-        console.log("fim");
-    }
-}
-
-// Chama as funções ao carregar a página
-getGatinho('https://cataas.com/cat/cute'); // Gato fofo
-getGatinho2('https://cataas.com/cat/sleeping'); // Gato dormindo
-
-function trocarGatoFofo() {
-    getGatinho('https://cataas.com/cat/cute'); // Muda a imagem ao clicar
-}
-
-function trocarGatoDormindo() {
-    getGatinho2('https://cataas.com/cat/sleeping'); // Muda a imagem ao clicar
-}
+  // Função para buscar imagem de gato fofo
+  function getGatinho(endpoint) {
+      fetch(endpoint)
+          .then(response => {
+              return response.url; // A URL da imagem é retornada diretamente
+          })
+          .then(urlIMG => {
+              let content = document.getElementById("content");
+              content.innerHTML = `<img src="${urlIMG}" alt="Gato" style="width: 300px; margin: 10px; height: 400px" />`;
+              content.innerHTML += `<p> Um gato fofo </p>`;
+          })
+          .catch(error => console.log(error))
+          .finally(() => console.log("FIM"));
+  }
+  
+  // Função assíncrona para buscar imagem de gato dormindo
+  async function getGatinho2(endpoint) {
+      try {
+          let response = await fetch(endpoint);
+          let urlIMG = response.url; // Usa diretamente a URL da resposta
+          let content = document.getElementById('content2');
+          content.innerHTML = `<img src="${urlIMG}" alt="Gato" style="width: 300px; margin: 10px; height: 400px" />`;
+          content.innerHTML += `<p> Um gato dormindo </p>`;
+      } catch (error) {
+          console.log(error);
+      } finally {
+          console.log("fim");
+      }
+  }
+  
+  // Chama as funções ao carregar a página
+  getGatinho('https://cataas.com/cat/cute'); // Gato fofo
+  getGatinho2('https://cataas.com/cat/sleeping'); // Gato dormindo
+  
+  function trocarGatoFofo() {
+      getGatinho('https://cataas.com/cat/cute'); // Muda a imagem ao clicar
+  }
+  
+  function trocarGatoDormindo() {
+      getGatinho2('https://cataas.com/cat/sleeping'); // Muda a imagem ao clicar
+  }
 ```
 
 Depois de aplicar um pouco de CSS, observe o resultado final: 
